@@ -1,5 +1,5 @@
 import streamlit as st
-from langchain.embeddings import HuggingFaceBgeEmbeddings
+from langchain_community.embeddings import HuggingFaceBgeEmbeddings
 from langchain.document_loaders import PyPDFLoader
 from langchain.vectorstores import Chroma
 from langchain.chains import RetrievalQA
@@ -77,7 +77,7 @@ def main():
             response = qa_chain.run(user_input)
             st.session_state.chat_history.append({"question": user_input, "response": response})  # Store chat history
             st.rerun()  # Corrected method for rerunning the script
-            #edited something
+            #edited something`
 
 if __name__ == "__main__":
     main()
