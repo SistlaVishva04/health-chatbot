@@ -77,6 +77,7 @@ def main():
             response = qa_chain.run(user_input)
             st.session_state.chat_history.append({"question": user_input, "response": response})  # Store chat history
             st.rerun()  # Corrected method for rerunning the script
+            #edited something
 
 if __name__ == "__main__":
     main()
